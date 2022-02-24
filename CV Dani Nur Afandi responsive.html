@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <title>Dani's CV</title>
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(240, 240, 240);
+        margin: 0;
+        max-width: 1366px;
+        margin: auto;
+      }
+      p {
+        line-height: 1.5;
+      }
+      .page {
+        width: 98%;
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .bio,
+      .work-ex,
+      .education {
+        background-color: white;
+        color: gray;
+        width: 30%;
+        overflow: hidden;
+        border-radius: 5px;
+        padding-bottom: 40px;
+        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        float: left;
+      }
+      .bio .photo {
+        background-image: url("https://exelprivat.com/wp-content/uploads/2020/03/dani_edo_small.png");
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-position: -87px 0;
+        background-size: 350px;
+        margin: 25px auto 15px;
+        color: white;
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .bio .mybio {
+        padding: 5px 10px;
+      }
+      .bio hr {
+        margin-bottom: 50px;
+      }
+      .bio .desc {
+        padding: 15px;
+        text-align: center;
+        color: gray;
+        font-size: 22px;
+      }
+      .myname {
+        color: dodgerblue;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 25px;
+        text-align: center;
+        color: dodgerblue;
+      }
+      h2 {
+        font-size: 35px;
+        color: dodgerblue;
+        margin: 0px 0px 25px;
+      }
+      h3 {
+        font-size: 25px;
+        margin: 20px 5px 10px;
+      }
+      h4 {
+        font-size: 20px;
+        margin: 20px 5px 5px 5px;
+      }
+      .icon,
+      .date {
+        display: block;
+        overflow: auto;
+        font-size: 17px;
+        box-sizing: border-box;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      .icon:hover,
+      .icon:hover i {
+        background-color: dodgerblue;
+        color: white;
+      }
+      .icon p,
+      .date p {
+        padding: 0px;
+        margin: 10px 0px;
+      }
+      .date {
+        width: 300px;
+        color: dodgerblue;
+        display: flex;
+        align-items: center;
+      }
+      i {
+        margin: 2px 10px;
+        color: dodgerblue;
+        float: left;
+        padding: 9px;
+      }
+      hr {
+        width: 80%;
+        height: 1px;
+        opacity: 0.3;
+        padding: 0;
+        margin-bottom: 15px;
+      }
+      .rate {
+        margin: auto;
+        width: 90%;
+        background-color: rgb(230, 230, 230);
+        border-radius: 9px;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .rate .percent {
+        background-color: dodgerblue;
+        border-radius: 9px;
+        font-size: 14px;
+      }
+      .platform {
+        text-align: left;
+        padding: 10px 20px 5px;
+      }
+      .work-ex,
+      .education {
+        width: 69%;
+        float: right;
+        padding: 40px;
+      }
+      .education {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      h2 i {
+        padding: 0;
+        margin: 4px 15px 4px 0px;
+      }
+      /* .curent {
+        background-color: dodgerblue;
+        color: white;
+        padding: 4px 6px;
+        border-radius: 5px;
+      } */
+      a {
+        color: dodgerblue;
+        text-decoration: none;
+      }
+      .footer {
+        display: block;
+        background-color: dodgerblue;
+        color: white;
+        clear: both;
+        margin: 30px 0px 0px 0px;
+        padding: 30px;
+        text-align: left;
+      }
+      .footer .fa,
+      .footer .fab {
+        color: white;
+        width: 30px;
+        text-align: center;
+        padding: 10px 0;
+      }
+      /* .footer a {
+        color: dodgerblue;
+        background-color: white;
+        padding: 3px 7px;
+        margin: 3px 3px;
+        border-radius: 5px;
+        opacity: 0.9;
+      } */
+      .footer h4 {
+        margin-top: 0;
+      }
+      .footer .icon p {
+        white-space: nowrap;
+      }
+      .personal-info .icon,
+      .portfolio .icon {
+        display: flex;
+        height: unset;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 1230px) {
+        .icon {
+          height: 60px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .bio,
+        .work-ex,
+        .education {
+          width: 100%;
+        }
+        .icon {
+          height: 40px;
+        }
+        .work-ex {
+          margin-top: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!--Page Container-->
+      <div class="bio">
+        <!--BioContainer-->
+        <div class="photo"></div>
+        <div class="mybio">
+          <div class="desc">
+            <div class="myname">Dani Nur Afandi, S.Mat</div>
+            Front End Developer
+          </div>
+          <hr />
+          <div class="personal-info">
+            <h1>Personal Information</h1>
+            <div class="icon">
+              <i class="fa fa-calendar"></i>
+              <p>Ponorogo, 16 November 1993</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-mars"></i>
+              <p>Laki-Laki</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-mosque" style="padding: 9px 4px"></i>
+              <p>Islam</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-map-marker-alt"></i>
+              <p>Ponorogo, Jawa Timur</p>
+            </div>
+          </div>
+          <hr />
+          <div class="portfolio">
+            <h1>Portfolio</h1>
+            <div class="icon">
+              <i class="fab fa-chrome"></i>
+              <p>https://daninurafandi.netlify.app</p>
+            </div>
+            <div class="icon">
+              <i class="fab fa-github"></i>
+              <p>https://github.com/dani-edo</p>
+            </div>
+          </div>
+          <hr />
+          <div class="skills">
+            <h1>Skills</h1>
+            <div class="platform">VueJs</div>
+            <div class="rate">
+              <div class="percent" style="width: 80%">80%</div>
+            </div>
+            <div class="platform">NuxtJs</div>
+            <div class="rate">
+              <div class="percent" style="width: 70%">70%</div>
+            </div>
+            <div class="platform">ReactJs</div>
+            <div class="rate">
+              <div class="percent" style="width: 60%">60%</div>
+            </div>
+            <div class="platform">NextJs</div>
+            <div class="rate">
+              <div class="percent" style="width: 50%">50%</div>
+            </div>
+            <div class="platform">Angular</div>
+            <div class="rate">
+              <div class="percent" style="width: 60%">60%</div>
+            </div>
+            <div class="platform">Jquery</div>
+            <div class="rate">
+              <div class="percent" style="width: 85%">85%</div>
+            </div>
+            <div class="platform">API Integration</div>
+            <div class="rate">
+              <div class="percent" style="width: 60%">60%</div>
+            </div>
+            <div class="platform">Typescript</div>
+            <div class="rate">
+              <div class="percent" style="width: 50%">50%</div>
+            </div>
+            <div class="platform">Firebase</div>
+            <div class="rate">
+              <div class="percent" style="width: 50%">50%</div>
+            </div>
+            <div class="platform">Bootstrap</div>
+            <div class="rate">
+              <div class="percent" style="width: 90%">90%</div>
+            </div>
+            <div class="platform">Vuetify</div>
+            <div class="rate">
+              <div class="percent" style="width: 70%">70%</div>
+            </div>
+            <div class="platform">Tailwind</div>
+            <div class="rate">
+              <div class="percent" style="width: 50%">50%</div>
+            </div>
+            <div class="platform">SASS</div>
+            <div class="rate">
+              <div class="percent" style="width: 95%">95%</div>
+            </div>
+            <div class="platform">Git</div>
+            <div class="rate">
+              <div class="percent" style="width: 90%">90%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-ex">
+        <h2><i class="fa fa-briefcase"></i>Work Experience</h2>
+        <h3>SALT</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>November 2020 - <span class="curent">Now</span></p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          I am currently working at SALT. A Digital Transformation for Marketing
+          agency specialized in marketing technology based on data analytics.
+        </p>
+        <p style="margin-left: 19px; text-align: justify">
+          The project that I handle now is Dunia Games
+          (https://duniagames.co.id), Indonesia's most reliable gaming news
+          portal. We have the latest infos of video game, gaming industry,
+          eSports, tech, and pop culture.
+        </p>
+        <p style="margin-left: 19px; text-align: justify">
+          The technologies that we used there is Angular. There are several
+          development features that I have worked on at SALT, including Google
+          Adsense Setup, Force Username page, News and Update Page Landing
+          (https://duniagames.co.id/discover), Tournament Landing
+          (https://duniagames.co.id/esports/en), My Profile, My Videos and
+          Playlist page.
+        </p>
+        <hr />
+        <h3>Gomodo</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>January 2019 - <span class="curent">October 2020</span></p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          I have almost two years of experience at startup company, Gomodo
+          Technologies. Gomodo is an online booking and payment system for
+          micro, small, and medium entreprises in the services and tourism
+          industries that comes equipped with useful tools such as e-invoicing,
+          promo code generators, digital ads booking forms, and other great
+          supported features.
+        </p>
+        <p style="margin-left: 19px; text-align: justify">
+          As a software as a service (SaaS), Gomodo makes a product, maintains
+          it, and develops it. I am in charge of running web development from
+          the client side. At the company I learned a lot of things, especially
+          related to technical matters regarding web development. There are
+          several technologies that I learned and I used there, including the
+          following: VueJs, Nuxt, Laravel, ReactJs, NextJs, Bootstrap, SASS,
+          Jquery, Git, Docker, MySql, etc.
+        </p>
+        <p style="margin-left: 19px; text-align: justify">
+          There are several projects that I have worked on at Gomodo, including
+          Gomodo B2B Landing Page, Redesign Gomodo.id Dashboard, Gomodo
+          Storefront, Lets Go Travel BNI, and so on. For details, please check
+          the
+          <a href="https://daninurafandi.netlify.app/"
+            >https://daninurafandi.netlify.app/</a
+          >
+          page.
+        </p>
+        <hr />
+        <h3>Programming Tutor</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>August 2018 - December 2018</p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          I have experience as a tutor of basic programming logic for children.
+          There I was assigned to teach elementary and middle school age
+          children to fund basic logic programming. The applications used are
+          Scratch and Thungkable. The material taught is looping logic,
+          branching, and other fundamental programming materials, all of which
+          are studied coolly in the form of making games.
+        </p>
+        <hr />
+        <h3>Math Tutor</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>July 2017 - November 2018</p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          Become a Mathematics Tutor in Gamma Exacta Tutoring, Kindy Educa, and
+          Exel Privat. My job is teach mathematics for High School, discuss exam
+          questions with them, and provide additional competence in the form of
+          quick ways to work on math problems, both by teaching the in class
+          room and the private.
+        </p>
+      </div>
+      <div class="education">
+        <h2><i class="fa fa-graduation-cap"></i>Education</h2>
+        <h3>Mathematic</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>2012 - 2017</p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          I got my bachelor's degree in mathematics after studying at the state
+          Islamic university of Sunan Kalijaga Yogyakarta. There I learned a lot
+          about mathematics, basic programming, and some organizational
+          activities. When I graduated, I got a 3.57 GPA.
+        </p>
+        <hr />
+        <h3>Computer and Network Engineering</h3>
+        <div class="date">
+          <i class="fa fa-calendar"></i>
+          <p>2009 - 2012</p>
+        </div>
+        <p style="margin-left: 19px; text-align: justify">
+          Since I was in elementary school, I was obsessed with the computer, so
+          I took computer and network engineering major in my hometown schools,
+          namely SMK PGRI 2 Ponorogo. There I learned many things about
+          installation, repair, maintenance of computers and networks.
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <h4>Contact me</h4>
+      <div class="icon">
+        <i class="fa fa-mobile-alt"></i>
+        <p>082298020602 (Telp/Whatsapp)</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-envelope"></i>
+        <p>dani.nur.afandi@gmail.com</p>
+      </div>
+      <div class="icon">
+        <i class="fab fa-linkedin-in"></i>
+        <p>https://www.linkedin.com/in/dani-nur-afandi</p>
+      </div>
+      <div class="icon">
+        <i class="fab fa-instagram"></i>
+        <p>https://www.instagram.com/dani.edo/</p>
+      </div>
+      <!-- Find me on
+      <p>
+        <a
+          href="https://www.facebook.com/dani.edogawa.17?ref=bookmarks"
+          target="_blank"
+          >Facebook</a
+        >
+        and
+        <a
+          href="https://instagram.com/dani.edo?utm_source=ig_profile_share&igshid=1am0r8tauq0ao"
+          target="_blank"
+          >Instagram</a
+        >
+      </p> -->
+      <!--<i class="fa fa-facebook fa-2x" style="color: white; text-align: center;margin: 2px 10px; float: none; padding: 9px;">-->
+    </div>
+  </body>
+</html>
