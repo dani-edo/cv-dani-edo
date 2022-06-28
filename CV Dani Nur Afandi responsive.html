@@ -134,19 +134,30 @@
         padding: 0;
         margin-bottom: 15px;
       }
-      .rate {
+      .skills-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skills-wrapper .rate {
         margin: auto;
         width: 90%;
-        background-color: rgb(230, 230, 230);
+        /* background-color: rgb(230, 230, 230); */
         border-radius: 9px;
-        color: white;
+        color: dodgerblue;
         text-align: center;
         margin-bottom: 10px;
+        width: calc(50% - 10px);
       }
-      .rate .percent {
-        background-color: dodgerblue;
+      .skills-wrapper .rate .percent {
+        /* background-color: dodgerblue; */
+        background-color: rgb(230 230 230 / 34%);
         border-radius: 9px;
-        font-size: 14px;
+        font-size: 16px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
       }
       .platform {
         text-align: left;
@@ -255,10 +266,10 @@
               <i class="fa fa-mars"></i>
               <p>Male</p>
             </div>
-            <div class="icon">
+            <!-- <div class="icon">
               <i class="fa fa-mosque" style="padding: 9px 4px"></i>
               <p>Islam</p>
-            </div>
+            </div> -->
             <div class="icon">
               <i class="fa fa-map-marker-alt"></i>
               <p>Sleman, Yogyakarta</p>
@@ -279,67 +290,40 @@
           <hr />
           <div class="skills">
             <h1>Skills</h1>
-            <div class="platform">Angular</div>
-            <div class="rate">
-              <div class="percent" style="width: 85%">85%</div>
-            </div>
-            <div class="platform">Jquery</div>
-            <div class="rate">
-              <div class="percent" style="width: 85%">85%</div>
-            </div>
-            <div class="platform">VueJs</div>
-            <div class="rate">
-              <div class="percent" style="width: 80%">80%</div>
-            </div>
-            <div class="platform">NuxtJs</div>
-            <div class="rate">
-              <div class="percent" style="width: 80%">80%</div>
-            </div>
-            <div class="platform">ReactJs</div>
-            <div class="rate">
-              <div class="percent" style="width: 80%">80%</div>
-            </div>
-            <div class="platform">NextJs</div>
-            <div class="rate">
-              <div class="percent" style="width: 80%">80%</div>
-            </div>
-            <br />
-            <div class="platform">Bootstrap</div>
-            <div class="rate">
-              <div class="percent" style="width: 90%">90%</div>
-            </div>
-            <div class="platform">Vuetify</div>
-            <div class="rate">
-              <div class="percent" style="width: 70%">70%</div>
-            </div>
-            <div class="platform">Tailwind</div>
-            <div class="rate">
-              <div class="percent" style="width: 50%">50%</div>
-            </div>
-            <br />
-            <div class="platform">Typescript</div>
-            <div class="rate">
-              <div class="percent" style="width: 70%">70%</div>
-            </div>
-            <br />
-            <div class="platform">SASS</div>
-            <div class="rate">
-              <div class="percent" style="width: 95%">95%</div>
-            </div>
-            <br />
-            <div class="platform">Git</div>
-            <div class="rate">
-              <div class="percent" style="width: 90%">90%</div>
-            </div>
-            <br />
-            <div class="platform">Figma</div>
-            <div class="rate">
-              <div class="percent" style="width: 60%">60%</div>
-            </div>
-            <br />
-            <div class="platform">Docker</div>
-            <div class="rate">
-              <div class="percent" style="width: 70%">70%</div>
+            <div class="skills-wrapper">
+              <div class="rate">
+                <div class="percent" style="width: 100%">ReactJs</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Angular</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">VueJs</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Jquery</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">NuxtJs</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">NextJs</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Typescript</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Bootstrap</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">SASS</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Git</div>
+              </div>
+              <div class="rate">
+                <div class="percent" style="width: 100%">Figma</div>
+              </div>
             </div>
           </div>
         </div>
