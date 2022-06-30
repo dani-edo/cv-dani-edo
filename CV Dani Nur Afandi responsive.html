@@ -34,18 +34,24 @@
         margin: auto;
         margin-top: 15px;
         margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .page .left {
+        width: 30%;
+      }
+      .page .right {
+        width: 69%;
       }
       .bio,
       .work-ex,
       .education {
         background-color: white;
         color: gray;
-        width: 30%;
         overflow: hidden;
         border-radius: 5px;
         padding-bottom: 40px;
         box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
-        float: left;
       }
       .bio .photo {
         background-image: url("https://exelprivat.com/wp-content/uploads/2020/03/dani_edo_small.png");
@@ -101,8 +107,8 @@
         overflow: auto;
         font-size: 17px;
         box-sizing: border-box;
-        height: 40px;
-        overflow: hidden;
+        /* height: 40px;
+        overflow: hidden; */
         border-radius: 5px;
       }
       .icon:hover,
@@ -114,6 +120,9 @@
       .date p {
         padding: 0px;
         margin: 10px 0px;
+      }
+      .icon p {
+        margin: 5px 0px;
       }
       .date {
         width: 300px;
@@ -165,8 +174,6 @@
       }
       .work-ex,
       .education {
-        width: 69%;
-        float: right;
         padding: 40px;
       }
       .education {
@@ -192,16 +199,19 @@
         background-color: dodgerblue;
         color: white;
         clear: both;
-        margin: 30px 0px 0px 0px;
-        padding: 30px;
         text-align: left;
+        margin-top: 15px;
+        padding: 30px 13px;
       }
       .footer .fa,
       .footer .fab {
         color: white;
         width: 30px;
         text-align: center;
-        padding: 10px 0;
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       /* .footer a {
         color: dodgerblue;
@@ -212,11 +222,13 @@
         opacity: 0.9;
       } */
       .footer h4 {
-        margin-top: 0;
+        text-align: center;
+        font-size: 25px;
+        margin: 0 0 15px;
       }
-      .footer .icon p {
+      /* .footer .icon p {
         white-space: nowrap;
-      }
+      } */
       .personal-info .icon,
       .portfolio .icon {
         display: flex;
@@ -247,241 +259,250 @@
   <body>
     <div class="page">
       <!--Page Container-->
-      <div class="bio">
-        <!--BioContainer-->
-        <div class="photo"></div>
-        <div class="mybio">
-          <div class="desc">
-            <div class="myname">Dani Nur Afandi, S.Mat</div>
-            Front End Developer
+      <div class="left">
+        <div class="bio">
+          <!--BioContainer-->
+          <div class="photo"></div>
+          <div class="mybio">
+            <div class="desc">
+              <div class="myname">Dani Nur Afandi, S.Mat</div>
+              Front End Engineer
+            </div>
+            <hr />
+            <div class="personal-info">
+              <h1>Personal Information</h1>
+              <div class="icon">
+                <i class="fa fa-calendar"></i>
+                <p>28 Years old</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-mars"></i>
+                <p>Male</p>
+              </div>
+              <!-- <div class="icon">
+                <i class="fa fa-mosque" style="padding: 9px 4px"></i>
+                <p>Islam</p>
+              </div> -->
+              <div class="icon">
+                <i class="fa fa-map-marker-alt"></i>
+                <p>Sleman, Yogyakarta</p>
+              </div>
+            </div>
+            <hr />
+            <div class="portfolio">
+              <h1>Portfolio</h1>
+              <div class="icon">
+                <i class="fab fa-chrome"></i>
+                <p>https://daninurafandi.netlify.app</p>
+              </div>
+              <div class="icon">
+                <i class="fab fa-github"></i>
+                <p>https://github.com/dani-edo</p>
+              </div>
+            </div>
+            <hr />
+            <div class="skills">
+              <h1>Skills</h1>
+              <div class="skills-wrapper">
+                <div class="rate">
+                  <div class="percent" style="width: 100%">ReactJs</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Angular</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">VueJs</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Jquery</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">NuxtJs</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">NextJs</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Typescript</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Bootstrap</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">SASS</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Git</div>
+                </div>
+                <div class="rate">
+                  <div class="percent" style="width: 100%">Figma</div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="footer">
+          <h4>Contact me</h4>
+          <div class="icon">
+            <i class="fa fa-mobile-alt"></i>
+            <p>082298020602 (Phone/Whatsapp)</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-envelope"></i>
+            <p>dani.nur.afandi@gmail.com</p>
+          </div>
+          <div class="icon">
+            <i class="fab fa-linkedin-in"></i>
+            <p>https://www.linkedin.com/in/dani-nur-afandi</p>
+          </div>
+          <!-- <div class="icon">
+            <i class="fab fa-instagram"></i>
+            <p>https://www.instagram.com/dani.edo/</p>
+          </div> -->
+          <!-- Find me on
+          <p>
+            <a
+              href="https://www.facebook.com/dani.edogawa.17?ref=bookmarks"
+              target="_blank"
+              >Facebook</a
+            >
+            and
+            <a
+              href="https://instagram.com/dani.edo?utm_source=ig_profile_share&igshid=1am0r8tauq0ao"
+              target="_blank"
+              >Instagram</a
+            >
+          </p> -->
+          <!--<i class="fa fa-facebook fa-2x" style="color: white; text-align: center;margin: 2px 10px; float: none; padding: 9px;">-->
+        </div>
+      </div>
+      <div class="right">
+        <div class="work-ex">
+          <h2><i class="fa fa-briefcase"></i>Work Experience</h2>
+          <h3>SALT</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>November 2020 - <span class="curent">Now</span></p>
+          </div>
+          <p style="margin-left: 19px; text-align: justify">
+            I am currently working at SALT. A Digital Transformation for
+            Marketing agency specialized in marketing technology based on data
+            analytics.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            The project that I handle, is
+            <a href="duniagames.co.id">Dunia Games (duniagames.co.id) </a>,
+            Indonesia's most reliable gaming news portal. We have the latest
+            infos of video game, gaming industry, eSports, tech, and pop
+            culture.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            The technologies that we used there is Angular. There are several
+            development features that I have worked on at Dunia Games, including
+            Google Adsense Setup, Force Username page, News and Update Page
+            Landing, Tournament Landing, My Profile, Videos and Playlist page.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            At SALT, I'm also working on another project, namely
+            <a href="klop.co">Klop! (klop.co)</a>
+            as Front End Engineer in the Operations Team.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            The technology we use there is ReactJs. There are several
+            operational features that I have worked on at Klop!, including
+            Redirect Disclaimer Device Page, Credifaz Administrative Area Form,
+            Relational Logic Education Employment Field, Set Google Analytics
+            Data Layer, and Craete Klop Admin Page.
+          </p>
           <hr />
-          <div class="personal-info">
-            <h1>Personal Information</h1>
-            <div class="icon">
-              <i class="fa fa-calendar"></i>
-              <p>28 Years old</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-mars"></i>
-              <p>Male</p>
-            </div>
-            <!-- <div class="icon">
-              <i class="fa fa-mosque" style="padding: 9px 4px"></i>
-              <p>Islam</p>
-            </div> -->
-            <div class="icon">
-              <i class="fa fa-map-marker-alt"></i>
-              <p>Sleman, Yogyakarta</p>
-            </div>
+          <h3>Gomodo</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>January 2019 - <span class="curent">October 2020</span></p>
           </div>
+          <p style="margin-left: 19px; text-align: justify">
+            I have almost two years of experience at startup company, Gomodo.
+            Gomodo is an online booking and payment system for micro, small, and
+            medium entreprises in the services and tourism industries that comes
+            equipped with useful tools such as e-invoicing, promo code
+            generators, digital ads booking forms, and other great supported
+            features.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            As a software as a service (SaaS), Gomodo makes a product, maintains
+            it, and develops it. I am in charge of running web development from
+            the client side. At the company I learned a lot of things,
+            especially related to technical matters regarding web development.
+            The technology we use there is is NuxtJs (Vue), Laravel, NextJs
+            (React), Jquery, etc.
+          </p>
+          <p style="margin-left: 19px; text-align: justify">
+            There are several projects that I have worked on at Gomodo,
+            including B2B Landing Page, Redesign Gomodo Dashboard, Gomodo
+            Storefront, Lets Go Travel BNI, also Bug Fixing and Create New
+            Feature.
+            <!-- For details,
+            please check the
+            <a href="https://daninurafandi.netlify.app/"
+              >https://daninurafandi.netlify.app/</a
+            >
+            page. -->
+          </p>
           <hr />
-          <div class="portfolio">
-            <h1>Portfolio</h1>
-            <div class="icon">
-              <i class="fab fa-chrome"></i>
-              <p>https://daninurafandi.netlify.app</p>
-            </div>
-            <div class="icon">
-              <i class="fab fa-github"></i>
-              <p>https://github.com/dani-edo</p>
-            </div>
+          <h3>Programming Tutor</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>August 2018 - December 2018</p>
           </div>
+          <p style="margin-left: 19px; text-align: justify">
+            I have experience as a tutor of basic programming logic for
+            children. There I was assigned to teach elementary and middle school
+            age children to fund basic logic programming. The applications used
+            are Scratch and Thungkable. The material taught is looping logic,
+            branching, and other fundamental programming materials, all of which
+            are studied coolly in the form of making games.
+          </p>
           <hr />
-          <div class="skills">
-            <h1>Skills</h1>
-            <div class="skills-wrapper">
-              <div class="rate">
-                <div class="percent" style="width: 100%">ReactJs</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Angular</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">VueJs</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Jquery</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">NuxtJs</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">NextJs</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Typescript</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Bootstrap</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">SASS</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Git</div>
-              </div>
-              <div class="rate">
-                <div class="percent" style="width: 100%">Figma</div>
-              </div>
-            </div>
+          <h3>Math Tutor</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>July 2017 - November 2018</p>
           </div>
+          <p style="margin-left: 19px; text-align: justify">
+            Become a Mathematics Tutor in Gamma Exacta Tutoring, Kindy Educa,
+            and Exel Privat. My job is teach mathematics for High School,
+            discuss exam questions with them, and provide additional competence
+            in the form of quick ways to work on math problems, both by teaching
+            the in class room and the private.
+          </p>
+        </div>
+        <div class="education">
+          <h2><i class="fa fa-graduation-cap"></i>Education</h2>
+          <h3>Mathematic</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>2012 - 2017</p>
+          </div>
+          <p style="margin-left: 19px; text-align: justify">
+            I got my bachelor's degree in mathematics after studying at the
+            state Islamic university of Sunan Kalijaga Yogyakarta. There I
+            learned a lot about mathematics, basic programming, and some
+            organizational activities. When I graduated, I got a 3.57 GPA.
+          </p>
+          <hr />
+          <h3>Computer and Network Engineering</h3>
+          <div class="date">
+            <i class="fa fa-calendar"></i>
+            <p>2009 - 2012</p>
+          </div>
+          <p style="margin-left: 19px; text-align: justify">
+            Since I was in elementary school, I was obsessed with the computer,
+            so I took computer and network engineering major in my hometown
+            schools, namely SMK PGRI 2 Ponorogo. There I learned many things
+            about installation, repair, maintenance of computers and networks.
+          </p>
         </div>
       </div>
-      <div class="work-ex">
-        <h2><i class="fa fa-briefcase"></i>Work Experience</h2>
-        <h3>SALT</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>November 2020 - <span class="curent">Now</span></p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          I am currently working at SALT. A Digital Transformation for Marketing
-          agency specialized in marketing technology based on data analytics.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          The project that I handle, is
-          <a href="duniagames.co.id">Dunia Games (duniagames.co.id) </a>,
-          Indonesia's most reliable gaming news portal. We have the latest infos
-          of video game, gaming industry, eSports, tech, and pop culture.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          The technologies that we used there is Angular. There are several
-          development features that I have worked on at Dunia Games, including
-          Google Adsense Setup, Force Username page, News and Update Page
-          Landing, Tournament Landing, My Profile, Videos and Playlist page.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          At SALT, I'm also working on another project, namely
-          <a href="klop.co">Klop! (klop.co)</a>
-          as Front End Engineer in the Operations Team.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          The technology we use there is ReactJs. There are several operational
-          features that I have worked on at Klop!, including Redirect Disclaimer
-          Device Page, Credifaz Administrative Area Form, Relational Logic
-          Education Employment Field, Set Google Analytics Data Layer, and
-          Craete Klop Admin Page.
-        </p>
-        <hr />
-        <h3>Gomodo</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>January 2019 - <span class="curent">October 2020</span></p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          I have almost two years of experience at startup company, Gomodo.
-          Gomodo is an online booking and payment system for micro, small, and
-          medium entreprises in the services and tourism industries that comes
-          equipped with useful tools such as e-invoicing, promo code generators,
-          digital ads booking forms, and other great supported features.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          As a software as a service (SaaS), Gomodo makes a product, maintains
-          it, and develops it. I am in charge of running web development from
-          the client side. At the company I learned a lot of things, especially
-          related to technical matters regarding web development. The technology
-          we use there is is NuxtJs (Vue), Laravel, NextJs (React), Jquery, etc.
-        </p>
-        <p style="margin-left: 19px; text-align: justify">
-          There are several projects that I have worked on at Gomodo, including
-          B2B Landing Page, Redesign Gomodo Dashboard, Gomodo Storefront, Lets
-          Go Travel BNI, also Bug Fixing and Create New Feature.
-          <!-- For details,
-          please check the
-          <a href="https://daninurafandi.netlify.app/"
-            >https://daninurafandi.netlify.app/</a
-          >
-          page. -->
-        </p>
-        <hr />
-        <h3>Programming Tutor</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>August 2018 - December 2018</p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          I have experience as a tutor of basic programming logic for children.
-          There I was assigned to teach elementary and middle school age
-          children to fund basic logic programming. The applications used are
-          Scratch and Thungkable. The material taught is looping logic,
-          branching, and other fundamental programming materials, all of which
-          are studied coolly in the form of making games.
-        </p>
-        <hr />
-        <h3>Math Tutor</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>July 2017 - November 2018</p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          Become a Mathematics Tutor in Gamma Exacta Tutoring, Kindy Educa, and
-          Exel Privat. My job is teach mathematics for High School, discuss exam
-          questions with them, and provide additional competence in the form of
-          quick ways to work on math problems, both by teaching the in class
-          room and the private.
-        </p>
-      </div>
-      <div class="education">
-        <h2><i class="fa fa-graduation-cap"></i>Education</h2>
-        <h3>Mathematic</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>2012 - 2017</p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          I got my bachelor's degree in mathematics after studying at the state
-          Islamic university of Sunan Kalijaga Yogyakarta. There I learned a lot
-          about mathematics, basic programming, and some organizational
-          activities. When I graduated, I got a 3.57 GPA.
-        </p>
-        <hr />
-        <h3>Computer and Network Engineering</h3>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <p>2009 - 2012</p>
-        </div>
-        <p style="margin-left: 19px; text-align: justify">
-          Since I was in elementary school, I was obsessed with the computer, so
-          I took computer and network engineering major in my hometown schools,
-          namely SMK PGRI 2 Ponorogo. There I learned many things about
-          installation, repair, maintenance of computers and networks.
-        </p>
-      </div>
-    </div>
-    <div class="footer">
-      <h4>Contact me</h4>
-      <div class="icon">
-        <i class="fa fa-mobile-alt"></i>
-        <p>082298020602 (Phone/Whatsapp)</p>
-      </div>
-      <div class="icon">
-        <i class="fa fa-envelope"></i>
-        <p>dani.nur.afandi@gmail.com</p>
-      </div>
-      <div class="icon">
-        <i class="fab fa-linkedin-in"></i>
-        <p>https://www.linkedin.com/in/dani-nur-afandi</p>
-      </div>
-      <!-- <div class="icon">
-        <i class="fab fa-instagram"></i>
-        <p>https://www.instagram.com/dani.edo/</p>
-      </div> -->
-      <!-- Find me on
-      <p>
-        <a
-          href="https://www.facebook.com/dani.edogawa.17?ref=bookmarks"
-          target="_blank"
-          >Facebook</a
-        >
-        and
-        <a
-          href="https://instagram.com/dani.edo?utm_source=ig_profile_share&igshid=1am0r8tauq0ao"
-          target="_blank"
-          >Instagram</a
-        >
-      </p> -->
-      <!--<i class="fa fa-facebook fa-2x" style="color: white; text-align: center;margin: 2px 10px; float: none; padding: 9px;">-->
     </div>
   </body>
 </html>
